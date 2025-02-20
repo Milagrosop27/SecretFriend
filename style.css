@@ -1,14 +1,19 @@
 :root {
-    --color-primary: #df3210;
-    --color-secondary: #6e1414;
+    --color-primary: #531212;
+    --color-secondary: #0f7328;
     --color-tertiary: #fff310;
-    --color-button: #343434;
-    --color-button-hover: #5c5d5c;
+    --color-button: hsl(37, 100%, 50%);
+    --color-button-hover: #a96102;
     --color-text: #000000;
     --color-white: #ffffff;
 }
 
-/* Estilos generales */
+h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: 10px 0;
+}
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +35,6 @@ body {
     width: 100%;
 }
 
-/* Banner */
 .header-banner {
     flex: 40%;
     display: flex;
@@ -39,7 +43,6 @@ body {
     padding: 40px 0 0;
 }
 
-/* Sección de entrada */
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
@@ -52,7 +55,10 @@ body {
     width: 100%;
 }
 
-/* Títulos */
+.input-section .section-title {
+    color: #ffffff; 
+}
+
 .main-title {
     font-size: 48px;
     font-family: "Pacifico", cursive;
@@ -62,7 +68,7 @@ body {
 }
 
 .section-title {
-    font-family: "Inter", serif;
+    font-family: "Pacifico", cursive;
     font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
@@ -70,7 +76,6 @@ body {
     text-align: center;
 }
 
-/* Contenedores de entrada y botón */
 .input-wrapper {
     display: flex;
     justify-content: center;
@@ -88,11 +93,14 @@ body {
 }
 
 .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
     width: 300px;
     justify-content: center;
 }
 
-/* Estilos de entrada de texto */
 .input-title {
     flex: 1;
     padding: 10px 15px;
@@ -100,15 +108,14 @@ body {
     border: 2px solid #333;
     border-right: none;
     border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
+    font-family: "Pacifico", cursive;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos de botón */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-family: "Bebas Neue", serif;
+    font-size: 24px;
     border: 2px solid #000;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -116,49 +123,94 @@ button {
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
+    background-color:rgb(255, 0, 0); 
+    color:  white; 
     border-radius: 0 25px 25px 0;
+    border: 2px solid black;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color:rgb(113, 5, 5);
+    color: var(--color-white); /
 }
 
-/* Listas */
 ul {
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
+    font-family: "Concert One", static;
+    font-size: 30px;
     margin: 20px 0;
 }
-
+.name-list {
+    background-color: #56ff61; 
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
+    color: #ffffff;
+    font-family: "Lobster", static;
+    font-size: 35px;
     font-weight: bold;
     text-align: center;
 }
 
-/* Botón de sortear título */
 .button-draw {
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
+    padding: 15px 30px;
+    font-family: "Bebas Neue", serif;
+    font-size: 24px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    background-color: rgb(255, 0, 0); /* Mismo color de fondo que el botón "Add" */
+    color: white; /* Mismo color de texto que el botón "Add" */
+    margin-right: 10px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.button-draw:hover {
+    background-color: rgb(113, 5, 5); /* Mismo color de fondo al pasar el ratón que el botón "Add" */
+    color: var(--color-white); /* Mismo color de texto al pasar el ratón que el botón "Add" */
 }
 
 .button-draw img {
     margin-right: 40px;
 }
 
-.button-draw:hover {
+.button-draw .material-symbols-outlined {
+    margin-right: 8px; 
+}
+
+.button-reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    font-family: "Bebas Neue", serif;
+    font-size: 24px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    margin-right: 10px; 
+}
+.button-reset img {
+    margin-right: 40px;
+}
+
+.button-reset:hover {
     background-color: var(--color-button-hover);
+}
+
+.button-reset .material-symbols-outlined {
+    margin-right: 8px; 
 }
 
 .snow {
