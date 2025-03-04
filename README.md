@@ -1,5 +1,6 @@
 # SecretFriend
 -> Challengue Oracle + Alura Latam
+
 SecretFriend is a web application to easily and funnily draw a secret friend.
 
 ## Description
